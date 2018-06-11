@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "UxGood\\Bundle\\ColorAdminBundle\\UxGoodColorAdminBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
