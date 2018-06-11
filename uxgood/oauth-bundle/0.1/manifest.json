@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "UxGood\\Bundle\\OAuthBundle\\UxGoodOAuthBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
