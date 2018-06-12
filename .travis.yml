@@ -21,6 +21,7 @@ before_install:
 install:
     - composer create-project "symfony/skeleton:${SKELETON_VERSION}" flex
     - cd flex
+    - composer config minimum-stability dev
 
 script:
     - composer req "${PACKAGES}"
