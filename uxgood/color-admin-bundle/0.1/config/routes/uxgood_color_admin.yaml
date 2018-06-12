@@ -1,0 +1,3 @@
+uxgood_coloradmin:
+    resource: '@UxGoodColorAdminBundle/Resources/config/routing.yaml'
+    prefix: /color-admin

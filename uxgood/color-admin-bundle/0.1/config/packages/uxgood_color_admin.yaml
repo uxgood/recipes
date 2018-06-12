@@ -1,0 +1,2 @@
+imports:
+    - { resource: '@UxGoodColorAdminBundle/Resources/config/framework.yaml' }
