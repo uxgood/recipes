@@ -16,12 +16,11 @@ matrix:
 before_install:
     - phpenv config-rm xdebug.ini || true
     - export SYMFONY_ENDPOINT=https://symfony.sh/r/github.com/uxgood/recipes/${TRAVIS_PULL_REQUEST}
-    - export PACKAGES=$(curl -s $SYMFONY_ENDPOINT | sed -En 's/.*composer req "([^"]+)".*/\1/p')
+    - export PACKAGES=$(curl -s $SYMFONY_ENDPOINT | sed -En 's/.*composer req "([^"]+)".*/\1/p' | | sed 's/\^[0-9.a-zA-Z]*/\0@dev/')
 
 install:
     - composer create-project "symfony/skeleton:${SKELETON_VERSION}" flex
     - cd flex
-    - composer config minimum-stability dev
 
 script:
     - composer req "${PACKAGES}"
